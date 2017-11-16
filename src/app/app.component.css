@@ -1,0 +1,271 @@
+/*@media only screen and (max-width: 480px) {
+    body { width: 30%; }
+}
+@media only screen and (min-width: 481px) {
+    body { width: 60%; }
+}
+@media only screen and (min-width: 1024px) {
+    body { width: 100%;}
+}*/
+*{
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+[class*="col-"] {
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px){
+  /*for desktops*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.parallax {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/images/main_pic.webp");
+    min-height: 600px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax_text{
+  position: relative;
+  /*box-sizing: content-box;*/
+  top: 13.333em;
+  max-width: 50em;
+  margin: 0px auto;
+}
+
+.header{
+  margin: 0px auto;
+  display: grid;
+  max-width: 51em;
+  grid-template-columns: 1fr 1fr 1fr 1fr 4fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+  border-bottom: 1px solid #D3D3D3;
+  padding: 15px 0px 15px 0px;
+
+}
+
+
+@font-face {
+    font-family: Brandon_light;
+    src: url("../assets/fonts/Brandon_light.otf") format("opentype");
+}
+
+.parallax_text h3{
+    font-family: Brandon_light;
+    font-weight: 100;
+    font-size: 32px;
+    margin: 0px;
+}
+
+
+h1,h2,h3,h4{
+  font-family: Brandon_light;
+  color:white;
+  line-height: 1.5em;
+  text-align: left;
+
+}
+
+p {
+    font-size: 20px;
+    color: white;
+    font-family: 'Brandon_light';
+}
+
+.header > div {
+  /*vertical-align: top;*/
+}
+
+.main{
+  margin: 0px auto;
+  width: max-content;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main > div{
+  text-align: center;
+  width: auto;
+
+}
+
+#text_animate{
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 4s linear 0s alternate;
+}
+
+@keyframes type{
+  from { width: 0; }
+  to {width: 60%;}
+}
+
+#desc_animate p{
+  position: absolute;
+  left: 0.2rem;
+  top: 5rem;
+  opacity: 0;
+  animation: type2 5s ;
+  animation-fill-mode: forwards;
+  /*animation-name: type2;
+  animation-duration: 5s;*/
+
+}
+@keyframes type2{
+  0% {
+    position: absolute;
+    top: -3rem;
+    opacity: 0;
+  }
+
+  100% {
+    position: absolute;
+    top: 75%;
+    opacity: 1;
+  }
+
+}
+
+.proj_image{
+  position: absolute;
+  top: 820px;
+  left: calc((100% + 11px) * 0.5);
+  width: 450px;
+}
+
+.parallax_foreground{
+
+}
+
+.left{
+  position: absolute;
+  width: 10em;
+  /*height: max-content;*/
+  text-align: center;
+  /*float: left;*/
+  top: 26em;
+  color: black;
+  border: 1px solid blue;
+}
+
+.right{
+  position: relative;
+  width: 10em;
+  text-align: center;
+  /*width: 50%;*/
+  color: black;
+  border: 1px solid red;
+  /*float: left;*/
+  }
+
+.font_24{
+  color:black;
+  font-family: 'Brandon_light';
+  font-size: 24px;
+}
+
+.font_24b{
+    color:black;
+    font-family: 'Brandon_light';
+    font-size: 24px;
+    width: 14em;
+    margin-right: 1em;
+    padding: 1em;
+  }
+
+.font_36{
+  color:black;
+  font-family: 'Brandon_light';
+  font-size: 36px;
+}
+
+.img1{
+  margin-top: 1em;
+}
+.img2{
+  margin-top: 6em;
+}
+.img3{
+  margin-top: 12.5em;
+  /*position: relative;*/
+  /*top: 500px;*/
+}
+.skills_wrapper{
+  display: inline-block;
+  height: 45em;
+  width: 80%;
+}
+.skills_box{
+    text-align: -webkit-center;
+    width: 20em;
+    margin: 30px;
+    height: 31em;
+    background-color: white;
+    vertical-align: bottom;
+}
+.skills_box1{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+  content: url("../assets/images/skills1.webp");
+  width: 100%;
+}
+.skills_box2{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+  content: url("../assets/images/skills2.webp");
+  width: 100%;
+  margin-top: 6.4em;
+
+}
+.skills_box3{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+  content: url("../assets/images/skills3.webp");
+  width: 100%;
+
+}
+
+.container .row {
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
